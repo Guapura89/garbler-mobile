@@ -1,13 +1,18 @@
 .signup__container {
   height: 80vh;
-  display: flex;
-  .form-signup {
-    margin: 0 auto;
-    img {
-      width: 20%;
-    }
-    .log__button {
-      width: 60%;
+  .back__button {
+    padding: 80px 0 10px 16px;
+  }
+  .signup__form {
+    display: flex;
+    .form-signup {
+      margin: 0 auto;
+      img {
+        width: 20%;
+      }
+      .log__button {
+        width: 60%;
+      }
     }
   }
 }

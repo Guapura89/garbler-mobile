@@ -1,0 +1,34 @@
+<ion-app>
+  <ion-header id="main-content">
+    <ion-toolbar class="ion-text-center" color="dark">
+      <ion-buttons slot="end">
+        <ion-button (click)="logout()"
+          ><ion-icon size="large" name="log-out"></ion-icon
+        ></ion-button>
+      </ion-buttons>
+      <ion-img class="logo" src="../assets/icon/light-logo.png"></ion-img>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tabs>
+    <ion-tab-bar color="dark" slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="about">
+        <ion-icon name="people"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tracker">
+        <ion-icon name="map"></ion-icon>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tracker">
+        <ion-icon name="settings"></ion-icon>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-app>

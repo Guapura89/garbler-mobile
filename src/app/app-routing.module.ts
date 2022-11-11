@@ -1,26 +1,38 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LayoutLoggedinComponent } from './layout-loggedin/layout-loggedin.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+    path: 'layout',
+    component: LayoutLoggedinComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomePageModule),
+      },
+      {
+        path: 'about',
+        loadChildren: () =>
+          import('./about/about.module').then((m) => m.AboutPageModule),
+      },
+      {
+        path: 'tracker',
+        loadChildren: () =>
+          import('./tracker/tracker.module').then((m) => m.TrackerPageModule),
+      },
+    ],
   },
   {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full',
-  },
-  {
-    path: 'about',
-    loadChildren: () =>
-      import('./about/about.module').then((m) => m.AboutPageModule),
-  },
-  {
-    path: 'tracker',
-    loadChildren: () =>
-      import('./tracker/tracker.module').then((m) => m.TrackerPageModule),
   },
   {
     path: 'login',

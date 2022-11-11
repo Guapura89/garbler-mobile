@@ -48,7 +48,7 @@ export class LoginPage implements OnInit {
             console.log('not response');
           }
 
-          this.router.navigate(['/']);
+          this.router.navigate(['/layout']);
         })
         .catch((err) => {
           console.log('1 ' + err);
