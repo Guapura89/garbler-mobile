@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Log in</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login__container ion-align-items-center">
+    <form [formGroup]="formLogin" class="form-login ion-text-center">
+      <img src="../../assets/icon/green-logo.png" alt="garbler-logo" />
+      <h1><strong>Log in</strong></h1>
+      <ion-item class="ion-margin-vertical">
+        <ion-label position="floating">Email *</ion-label>
+        <ion-input
+          placeholder="exmple@gmail.com"
+          formControlName="email"
+        ></ion-input>
+      </ion-item>
+      <ion-item class="ion-margin-vertical">
+        <ion-label position="floating">Password *</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <div class="ion-text-center ion-margin-vertical">
+        <ion-button class="log__button" shape="round" (click)="onSignin()"
+          >Log in</ion-button
+        >
+      </div>
+    </form>
+  </div>
+  <div class="ion-text-end">
+    <p class="ion-margin-end">
+      Don't have an account?
+      <ion-text routerLink="/register" color="primary">Sign up</ion-text>
+    </p>
+  </div>
+</ion-content>

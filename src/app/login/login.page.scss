@@ -1,0 +1,13 @@
+.login__container {
+  height: 70vh;
+  display: flex;
+  .form-login {
+    margin: 0 auto;
+    img {
+      width: 20%;
+    }
+    .log__button {
+      width: 60%;
+    }
+  }
+}

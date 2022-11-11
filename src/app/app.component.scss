@@ -2,3 +2,22 @@
   width: 200px;
   margin: 0 auto;
 }
+
+.menu__buttons {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+  .menu-toggle {
+    width: 100%;
+    div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      img {
+        width: 50%;
+        margin: 30px auto;
+      }
+    }
+  }
+}

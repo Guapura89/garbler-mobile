@@ -1,24 +1,11 @@
 <ion-app>
-  <!-- Login and register menu -->
-  <ion-menu contentId="main-content">
-    <ion-header>
-      <ion-toolbar class="ion-text-center" color="primary">
-        <ion-title>Join us</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-      <div>
-        <ion-button>Login</ion-button>
-        <ion-button>Register</ion-button>
-      </div>
-    </ion-content>
-  </ion-menu>
-
   <!-- App header -->
   <ion-header id="main-content">
     <ion-toolbar class="ion-text-center" color="dark">
       <ion-buttons slot="end">
-        <ion-menu-button></ion-menu-button>
+        <ion-button (click)="logout()"
+          ><ion-icon size="large" name="log-out"></ion-icon
+        ></ion-button>
       </ion-buttons>
       <ion-img class="logo" src="../assets/icon/light-logo.png"></ion-img>
     </ion-toolbar>
@@ -32,17 +19,18 @@
     <ion-tab-bar color="dark" slot="bottom">
       <ion-tab-button tab="home">
         <ion-icon name="home"></ion-icon>
-        <ion-label>Home</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="about">
         <ion-icon name="people"></ion-icon>
-        <ion-label>About us</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="tracker">
         <ion-icon name="map"></ion-icon>
-        <ion-label>Tracker</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="tracker">
+        <ion-icon name="settings"></ion-icon>
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>

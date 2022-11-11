@@ -1,71 +1,75 @@
 <ion-content>
   <div class="container">
-    <div class="home__container ion-text-center ion-padding">
-      <div class="section ion-align-items-center">
-        <h1><strong>Start tracking your truck.</strong></h1>
-        <h6><strong>And be conected with others</strong></h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facere
-          reiciendis.
-        </p>
-
-        <ion-button class="start__button" shape="round">Start now</ion-button>
-      </div>
-
-      <div class="section">
-        <h1><strong>What is garbler?</strong></h1>
-        <h3>
-          <strong
-            ><ion-text color="medium"
-              >Know more about our porject</ion-text
-            ></strong
-          >
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
-          optio eligendi molestiae pariatur facere minima provident natus
-          corporis, non harum vitae sint amet deserunt quidem velit! Rem
-          distinctio exercitationem repellat?
-        </p>
-        <ion-button routerLink="/about" class="start__button" shape="round"
-          >Explore more</ion-button
+    <div class="home__container ion-text-center">
+      <div class="section ion-align-items-center ion-padding">
+        <div
+          class="user__container ion-justify-content-end ion-align-items-center"
         >
+          <div class="user-info__section ion-justify-content-end">
+            <div class="ion-margin-end ion-text-end">
+              <p class="ion-no-margin"><strong>{{ userName }}</strong></p>
+              <p class="ion-no-margin">{{ userDistrict }}</p>
+            </div>
+            <div>
+              <img
+                class="user-img"
+                src="../../assets/images/charlie.jpg"
+                alt="profile_image"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="welcome-text ion-text-start">
+          <h2 class="ion-no-margin">Welcome</h2>
+          <h1 class="ion-no-margin">
+            <strong class="ion-no-margin">{{ userName }}!</strong>
+          </h1>
+        </div>
+
+        <div class="truck__section ion-text-start">
+          <h4>Your truck</h4>
+          <div class="truck-card ion-justify-content-between ion-padding">
+            <div class="truck-info">
+              <h4>Truck 4</h4>
+              <p class="ion-no-margin">
+                <ion-text color="primary">picking up</ion-text>
+              </p>
+              <p id="see-map" class="ion-no-margin">See the map</p>
+            </div>
+            <div class="truck-img">
+              <img src="../../assets/images/truck.png" alt="truck" />
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="section">
-        <h1 class="ion-margin-bottom"><strong>How it works?</strong></h1>
-        <div class="steps-card ion-padding-horizontal">
-          <img src="../../assets/images/person-verified.png" alt="verified" />
-          <h3><strong>1. Just sign up</strong></h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-            mollitia ipsam possimus.
-          </p>
-        </div>
-
-        <div class="steps-card ion-padding-horizontal">
-          <img src="../../assets/images/map.png" alt="verified" />
-          <h3><strong>2. Select your district</strong></h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-            mollitia ipsam possimus.
-          </p>
-        </div>
-
-        <div class="steps-card ion-padding-horizontal">
-          <img src="../../assets/images/location.png" alt="verified" />
-          <h3><strong>3. Start tracking</strong></h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-            mollitia ipsam possimus.
-          </p>
+      <div class="section ion-padding">
+        <div class="related__section ion-text-start">
+          <h4>Related</h4>
+          <div class="related-card ion-justify-content-center ion-padding">
+            <div class="truck-info ion-text-center ion-align-items-center">
+              <p class="ion-no-margin">
+                <ion-text color="primary">Something...</ion-text>
+              </p>
+            </div>
+          </div>
+          <div class="related-card ion-justify-content-center ion-padding">
+            <div class="truck-info ion-text-center ion-align-items-center">
+              <p class="ion-no-margin">
+                <ion-text color="primary">Something...</ion-text>
+              </p>
+            </div>
+          </div>
+          <div class="related-card ion-justify-content-center ion-padding">
+            <div class="truck-info ion-text-center ion-align-items-center">
+              <p class="ion-no-margin">
+                <ion-text color="primary">Something...</ion-text>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div
-      class="contact__section ion-margin-vertical ion-justify-content-center ion-align-items-center"
-    >
-      <ion-button class="start__button" shape="round">Contact us</ion-button>
     </div>
   </div>
 </ion-content>

@@ -1,0 +1,13 @@
+.signup__container {
+  height: 80vh;
+  display: flex;
+  .form-signup {
+    margin: 0 auto;
+    img {
+      width: 20%;
+    }
+    .log__button {
+      width: 60%;
+    }
+  }
+}

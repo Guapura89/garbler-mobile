@@ -1,27 +1,51 @@
 .container {
   .home__container {
     .section {
-      margin: 200px 0;
+      margin: 100px 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      .start__button {
-        width: 70%;
-        margin: 16px auto;
-      }
-
-      .steps-card {
+      .welcome-text {
         margin: 50px 0;
+        width: 100%;
       }
-    }
-  }
-
-  .contact__section {
-    background-color: var(--ion-color-dark);
-    display: flex;
-    height: 100px;
-    ion-button {
-      width: 70%;
+      .user__container {
+        display: flex;
+        width: 100%;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        .user-info__section {
+          width: 100%;
+          display: flex;
+          .user-img {
+            border-radius: 50%;
+          }
+        }
+      }
+      .truck__section {
+        width: 100%;
+        .truck-card {
+          width: 100%;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          border-radius: 25px;
+          display: flex;
+          #see-map {
+            text-decoration: underline;
+          }
+        }
+      }
+      .related__section {
+        width: 100%;
+        .related-card {
+          width: 100%;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          border-radius: 25px;
+          height: 100px;
+          margin: 10px 0;
+        }
+      }
     }
   }
 }
