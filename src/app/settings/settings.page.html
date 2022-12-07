@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="settings__container">
+    <div class="ion-margin-vertical">
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img alt="Profile avat" src="../../assets/images/charlie.jpg" />
+        </ion-thumbnail>
+        <ion-label> Change profile avatar </ion-label>
+      </ion-item>
+    </div>
+
+    <div class="ion-margin-top">
+      <ion-item>
+        <ion-label>Edit tour district</ion-label>
+        <ion-icon name="cog-outline" class="ion-margin-end"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Edit name</ion-label>
+        <ion-input
+          class="ion-padding-horizontal"
+          placeholder="Carlos Sanchez"
+        ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>App info</ion-label>
+        <ion-icon
+          name="information-circle-outline"
+          class="ion-margin-end"
+        ></ion-icon>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Dark theme</ion-label>
+        <ion-toggle id="theme-toggle" slot="end"></ion-toggle>
+      </ion-item>
+    </div>
+
+    <div class="save">
+      <div class="ion-text-center ion-margin-vertical">
+        <ion-button class="save__button" shape="round" (click)="presentToast()"
+          >Save</ion-button
+        >
+      </div>
+    </div>
+  </div>
+</ion-content>

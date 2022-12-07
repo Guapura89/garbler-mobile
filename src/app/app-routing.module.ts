@@ -27,6 +27,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./tracker/tracker.module').then((m) => m.TrackerPageModule),
       },
+      {
+        path: 'settings',
+        loadChildren: () =>
+          import('./settings/settings.module').then(
+            (m) => m.SettingsPageModule
+          ),
+      },
     ],
   },
   {
@@ -43,6 +50,12 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () =>
       import('./register/register.module').then((m) => m.RegisterPageModule),
+  },
+
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./contact/contact.module').then((m) => m.ContactPageModule),
   },
 ];
 

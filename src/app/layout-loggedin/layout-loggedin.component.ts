@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-layout-loggedin',
@@ -10,7 +11,8 @@ import { Router } from '@angular/router';
 export class LayoutLoggedinComponent implements OnInit {
   constructor(
     private firebaseService: FirebaseService,
-    private router: Router
+    private router: Router,
+    private toastController: ToastController
   ) {}
 
   logout() {
@@ -20,6 +22,18 @@ export class LayoutLoggedinComponent implements OnInit {
         this.router.navigate(['/login']);
       })
       .catch((err) => console.log(err));
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Logged out succesfully',
+      duration: 1500,
+      position: 'top',
+      icon: 'close-circle',
+      color: 'danger',
+    });
+
+    await toast.present();
   }
 
   ngOnInit() {}

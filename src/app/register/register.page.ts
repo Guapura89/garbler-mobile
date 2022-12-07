@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoggedInService } from 'src/app/services/logged-in.service';
 import { FirebaseService } from '../services/firebase.service';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastController } from '@ionic/angular';
 import {
   FormControl,
   FormGroup,
@@ -23,7 +23,8 @@ export class RegisterPage implements OnInit {
     private alertController: AlertController,
     private firebaseService: FirebaseService,
     private loggedInService: LoggedInService,
-    private router: Router
+    private router: Router,
+    private toastController: ToastController
   ) {
     this.formSignup = this.fb.group({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -47,7 +48,7 @@ export class RegisterPage implements OnInit {
           } else {
             console.log('not response');
           }
-
+          this.presentToast();
           this.router.navigate(['/login']);
         })
         .catch((err) => {
@@ -79,6 +80,18 @@ export class RegisterPage implements OnInit {
 
     await alert.present();
     return;
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Account created',
+      duration: 1500,
+      position: 'top',
+      icon: 'people',
+      color: 'primary',
+    });
+
+    await toast.present();
   }
 
   onSigninWithGoogle() {

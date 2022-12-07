@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertController, ToastButton, ToastController } from '@ionic/angular';
 import {
   FormControl,
   FormGroup,
@@ -23,7 +23,8 @@ export class LoginPage implements OnInit {
     private alertController: AlertController,
     private firebaseService: FirebaseService,
     private loggedInService: LoggedInService,
-    private router: Router
+    private router: Router,
+    private toastController: ToastController
   ) {
     this.formLogin = this.fb.group({
       email: new FormControl('', Validators.required),
@@ -47,6 +48,8 @@ export class LoginPage implements OnInit {
           } else {
             console.log('not response');
           }
+
+          this.presentToast();
 
           this.router.navigate(['/layout']);
         })
@@ -72,6 +75,18 @@ export class LoginPage implements OnInit {
           }
         });
     }
+  }
+
+  async presentToast() {
+    const toast = await this.toastController.create({
+      message: 'Logged in succesfully',
+      duration: 1500,
+      position: 'top',
+      icon: 'checkmark',
+      color: 'primary',
+    });
+
+    await toast.present();
   }
 
   async presentError(title: string, msg: string) {

@@ -1,0 +1,12 @@
+.settings__container {
+  margin: 100px 0 0;
+  .save {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .save__button {
+      width: 60%;
+    }
+  }
+}
